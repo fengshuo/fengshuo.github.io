@@ -9,6 +9,7 @@ tags:
 author_profile: true
 classes: wide
 description: learn to write node package
+published: true
 ---
 
 This is a short note about how to get started with node package. Specifically, create an npm package which will install a `warm` command, and you can pass arguments with this command, for example:  
