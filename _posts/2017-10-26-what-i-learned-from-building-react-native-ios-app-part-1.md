@@ -14,7 +14,7 @@ author_profile: true
 classes: wide
 ---
 
-![Recycle Wizard in App Store](/assets/images/content/appInStore.png)
+![Recycle Wizard in App Store](/assets/img/posts/2017-10-26-what-i-learned-from-building-react-native-ios-app-part-1/appInStore.png)
 
 Today the React Native iOS app I've been building is available in App Store, I am very excited and I want to write down all the lessons I‘ve learned.
 

@@ -35,4 +35,4 @@ Add all the App Store submission disclaimer if you want to submit it app store.
 
 Luckily all the app icons and launch image source are still in the xcode, but make sure the launch screen file field is empty:
 
-![app icons](/assets/images/content/xcode-image-resource.png)
+![app icons](/assets/img/posts/2018-01-28-what-i-learned-from-building-react-native-ios-app-part-4/xcode-image-resource.png)

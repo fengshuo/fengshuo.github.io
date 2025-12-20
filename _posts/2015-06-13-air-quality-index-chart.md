@@ -16,12 +16,12 @@ classes: wide
 
 Living in a city which is notorious for its air pollution, I certainly care about the environment, especially the air quality. Luckily the air is so clean these days, and it made me wonder what's the chance of seeing a blue sky like this through out one year.
 
-![beijing weather in 365 days](/assets/images/content/air365.jpg)
+![beijing weather in 365 days](/assets/img/posts/2015-06-13-air-quality-index-chart/air365.jpg)
 <sub><sup>[source](http://mil.chinanews.com/sh/2014/01-27/5785288.shtml)</sup></sub>
 
 Here is the [link](http://bl.ocks.org/fengshuo/raw/913ea7c4037d740c7434/) of the block.
 
-![Snapshot](/assets/images/content/air-quality-snapshot.png)
+![Snapshot](/assets/img/posts/2015-06-13-air-quality-index-chart/air-quality-snapshot.png)
 
 
 # Data Acquisition

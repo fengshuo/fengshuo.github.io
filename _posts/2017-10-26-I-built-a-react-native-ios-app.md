@@ -14,7 +14,7 @@ author_profile: true
 classes: wide
 ---
 
-![app store](/assets/images/content/appInStore.png)
+![app store](/assets/img/posts/2017-10-26-I-built-a-react-native-ios-app/appInStore.png)
 
 Here are the posts documenting things I learned:
 

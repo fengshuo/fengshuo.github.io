@@ -23,7 +23,7 @@ classes: wide
 
 We have Rails taking request and return response, why do we need background jobs. It's because if we only let rails app server handles all requests, some requests will take much longer time to process, such as sending out bulk emails, reading or exporting large dataset, those requests will block the other requests and cause timeout. But if we use background/asynchronous jobs, we can put those time consuming jobs in a todo list and continue to handle other requests, and those jobs in the todo list will be processed later.
 
-![backgroundJob](/assets/images/content/sidekiq.png)
+![backgroundJob](/assets/img/posts/2019-02-07-understanding-background-jobs-sidekiq/sidekiq.png)
 
 The screenshot is from a [better explain](https://www.youtube.com/playlist?list=WL) the benefit of using background job framework.
 
@@ -86,7 +86,7 @@ mount Sidekiq::Web => '/sidekiq'
 Now go to `localhost:3000/sidekiq` to monitor the jobs, you should see something like this:
 
 ![](Untitled-b830a198-1095-4f2a-a7a4-b5b1f36d61e4.png)
-![sidekiqWebUI](/assets/images/content/sidekiq-web-ui.png)
+![sidekiqWebUI](/assets/img/posts/2019-02-07-understanding-background-jobs-sidekiq/sidekiq-web-ui.png)
 
 You should see a number greater than zero in the enqueued tab, no job has been processed yet, now let's process these jobs by running: `bundle exec sidekiq`
 
@@ -96,7 +96,7 @@ You should see jobs have been processed and the `test worker log` message in the
 
 As you see in the screenshot earlier, we could have another sidekiq server, that way, the app server doesn't need share resources with job framework:
 
-![networkStructure](/assets/images/content/sidekiqNetworkStructure.png)
+![networkStructure](/assets/img/posts/2019-02-07-understanding-background-jobs-sidekiq/sidekiqNetworkStructure.png)
 
 If you read the redis options doc [here](https://github.com/mperham/sidekiq/wiki/Using-Redis#using-an-initializer), there is a sidekiq server and sidekiq client, they are configured independently, [The server is responsible for popping jobs off the queue(s) and executing them. The client is responsible for adding jobs to the queue.](https://stackoverflow.com/questions/52599606/rails-sidekiq-help-me-understand-the-duplication-in-this-example-of-initialize) which matches the diagram above. There is another diagram [here](http://blog.nicolas-brousse.fr/articles/2015-07-15-test-1-sidekiq-on-separate-servers/).
 

@@ -87,7 +87,7 @@ But let's see the TCP/IP model as well and compare those two models.
 
 Every computer is in a subnet, it is a connected group of hosts, and the hosts in a subnet can talk to each other directly.
 
-![LAN](/assets/images/content/network-1-lan.jpg)
+![LAN](/assets/img/posts/2019-03-10-understanding-network/network-1-lan.jpg)
 
 ## Subnet Masks and CIDR Notation
 
@@ -101,7 +101,7 @@ We know that computer essentially works based on binary, here is a quick refresh
 
 Say we want to convert 27 to binary, what we need to to is to break this number down into powers of two:
 
-![binary](/assets/images/content/network-2-binary.jpg)
+![binary](/assets/img/posts/2019-03-10-understanding-network/network-2-binary.jpg)
 
 ### Netmasks
 
@@ -129,7 +129,7 @@ So the quick way to understand how many addresses are available within a subnet 
 
 A route table is used to determine where network traffic is directed. On linux, use `route -n` to see a result like this:
 
-![linux route table](/assets/images/content/network-screenshot-route-table.png)
+![linux route table](/assets/img/posts/2019-03-10-understanding-network/network-screenshot-route-table.png)
 
 For the first row, there is a G in the Flags column, which means the communication for this network must be sent through the gateway in the gateway column, which is 10.23.2.1. For second row, there is no G in the flags, that means the network is directly connected in some way.
 
@@ -137,7 +137,7 @@ For the first row, there is a G in the Flags column, which means the communicati
 
 public route table has target is connected with the Internet Gateway
 
-![aws route table 3](/assets/images/content/network-screeshot-routetable-aws-3.png)
+![aws route table 3](/assets/img/posts/2019-03-10-understanding-network/network-screeshot-routetable-aws-3.png)
 
 `0.0.0.0/0` represents any address on the Internet.
 
@@ -193,7 +193,7 @@ DNS stands for Domain Name System, it is basically the phonebook of the Internet
 
 ### The DNS Lookup Process
 
-![DNS lookup](/assets/images/content/network-3-DNS.jpg)
+![DNS lookup](/assets/img/posts/2019-03-10-understanding-network/network-3-DNS.jpg)
 
 ### DNS Record Types
 
@@ -223,7 +223,7 @@ Common type of DNS records are:
 
 It is a highly available and scalable cloud DNS web service.
 
-![aws route53](/assets/images/content/network-screeshot-aws-route53.png)
+![aws route53](/assets/img/posts/2019-03-10-understanding-network/network-screeshot-aws-route53.png)
 
 # Transport Layer
 
@@ -235,7 +235,7 @@ Transport layer bridge the gap between raw packets of internet layer and the ref
 - it provides for multiple network applications on one machine by utilizing **ports**
 - it establish connection by three-way handshaking
 
-![tcp 3 way handshake](/assets/images/content/network-4-tcp.jpg)
+![tcp 3 way handshake](/assets/img/posts/2019-03-10-understanding-network/network-4-tcp.jpg)
 
 - usually who acts as the server listens on famous ports like 80
 - superuser use port 1-1023, user process uses port number > 1024.
@@ -297,7 +297,7 @@ For AWS, the instances you launch into a private subnet in a VPC is not able to 
 
 # Configure a Secure Web App in AWS
 
-![aws vpc](/assets/images/content/network-5-aws.jpg)
+![aws vpc](/assets/img/posts/2019-03-10-understanding-network/network-5-aws.jpg)
 
 To see the detailed steps to create the structure, check this [post](https://shuofeng.dev//deploy-a-more-secure-rails-app-on-aws-with-vpc-part1/) and related concepts [here](https://shuofeng.dev//aws-vpc-concepts/).
 

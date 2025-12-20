@@ -19,10 +19,10 @@ After creating the bastion host and RDS instance(in a private subnet), you might
 
 
 The first step is to connect to the database like usual:
-![datagrip-1](/assets/images/content/datagrip-1.png)
+![datagrip-1](/assets/img/posts/2018-11-12-connect-with-rds-database-with-datagrip/datagrip-1.png)
 
 The second step is to use SSH key to setup SSH:
-![datagrip-2](/assets/images/content/datagrip-2.png)
+![datagrip-2](/assets/img/posts/2018-11-12-connect-with-rds-database-with-datagrip/datagrip-2.png)
 
 
 Link [1](https://medium.com/cory-mayfield/linking-amazon-rds-with-jetbrains-datagrip-d5cc0e2f44f4), link [2](https://github.com/aws-samples/aws-refarch-wordpress/issues/17#issuecomment-353771386)

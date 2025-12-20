@@ -58,6 +58,6 @@ There is a HTTP Header [Content-Disposition](https://developer.mozilla.org/en-US
 
 Go to the S3 bucket, click on properties of the file, click on metadata, then add a new key-value pair with key `Content-Disposition` and value `attachment`
 
-![s3-bucket-attachment](/assets/images/content/s3-bucket-attachment.png)
+![s3-bucket-attachment](/assets/img/posts/2018-11-17-download-file-instead-of-display-in-a-new-window/s3-bucket-attachment.png)
 
 Then in the Front End code, you don't even need the anchor element, visiting the link will download the file `window.location.href = 'http://s3.amazon.com/something.pdf';`

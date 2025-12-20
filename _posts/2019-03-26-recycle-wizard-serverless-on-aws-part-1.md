@@ -27,11 +27,11 @@ I recently updated the iOS app [Recycle Wizard](https://itunes.apple.com/us/app/
 
 The first version of the app is rather simple:
 
-![recycleWizard-first-version-structure](/assets/images/content/recycleWizard-first-version-structure.png)
+![recycleWizard-first-version-structure](/assets/img/posts/2019-03-26-recycle-wizard-serverless-on-aws-part-1/recycleWizard-first-version-structure.png)
 
 When I worked on the first version, I knew I wanted to improve the search functionality and add some level of data tracking so that I can adjust the functionality. Now I am more familiar with AWS, I decided to apply some of the serverless tools from AWS, below is the new structure:
 
-![recycleWizard-current-version-structure](/assets/images/content/recycleWizard-current-version-structure.png)
+![recycleWizard-current-version-structure](/assets/img/posts/2019-03-26-recycle-wizard-serverless-on-aws-part-1/recycleWizard-current-version-structure.png)
 
 There are two ways of getting a result, search by taking a photo or typing a keyword. If searching by a photo, I use AWS rekognition to detect the labels of the image, and use the labels as the keyword to search. The shared part of those two ways is the search part, which I will add more details later.
 

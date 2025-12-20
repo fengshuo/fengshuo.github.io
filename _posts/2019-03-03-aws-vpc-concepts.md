@@ -40,7 +40,7 @@ One subnet must reside entirely in one availability zone and cannot span zones. 
 
 Subnets can be classified as public, private, or VPN-only. A public subnet means it is associated with a route table that has an Internet Gateway attached, a private subnet is associated with a route table that doesn't have Internet Gateway, instances launched into a private subnet cannot communicate with the open internet, the benefit of it is higher level of security, although it has drawbacks, such as the instance cannot install software, but it can be solved by routing traffic through a NAT instance.
 
-![attach-igw-to-route-table](/assets/images/content/vpc-attach-igw-to-route-table.png)
+![attach-igw-to-route-table](/assets/img/posts/2019-03-03-aws-vpc-concepts/vpc-attach-igw-to-route-table.png)
 
 Subnets must be associated with a route table, newly created subnets are automatically associated with the default route table('main'), and by default all subnets traffic is allowed to communicate with each other via the local target in the route table.
 
@@ -48,7 +48,7 @@ Subnets must be associated with a route table, newly created subnets are automat
 
 Internet Gateway is a VPC component that allows communication between instances in VPC and the Internet. It is horizontally scaled, redundant and highly available. The way you use Internet Gateway is to attach it to your VPC (only 1 IGW can be attached to a VPC), and use it as a target in a route table with subnets associated.
 
-![attach-igw](/assets/images/content/vpc-attach-igw.png)
+![attach-igw](/assets/img/posts/2019-03-03-aws-vpc-concepts/vpc-attach-igw.png)
 
 What's also interesting about IGW is that it also provides NAT(network address translation) translation for instances that have been assigned a public IP address. EC2 inside a VPC are only aware of their private IP address, when an instance receives traffic from the Internet, the IGW translates the destination address (the public IP address or Elastic IP address) to the instance's private IP address, and vice versa, it also maintains this public IP address to private IP address mapping.
 
@@ -62,7 +62,7 @@ A route table contains a set of rules to determine where network traffic is dire
 
 Each route table contains a default route called the local route, which enables communication within the VPC, you cannot modify the local route.
 
-![private-subnet-route-table](/assets/images/content/vpc-private-subnet-route-table.png)
+![private-subnet-route-table](/assets/img/posts/2019-03-03-aws-vpc-concepts/vpc-private-subnet-route-table.png)
 
 Since you can have multiple route tables in a VPC, it's better to create new route tables when needed.
 
@@ -70,7 +70,7 @@ Since you can have multiple route tables in a VPC, it's better to create new rou
 
 NACL is another (optional) layer of security that acts like a stateless firewall **on a subnet level**, stateless means that you have to specify both inbound and outbound rules(`ALLOW` or `DENY` rule). Rules are evaluated in order, starting with the lowest rule number, the last rule is a catch-all deny rule. It's better to have an increment of 10 for rule number so that it won't cause an issue if you need add a certain rule.
 
-![vpc-nacl-rules](/assets/images/content/vpc-nacl-rules.png)
+![vpc-nacl-rules](/assets/img/posts/2019-03-03-aws-vpc-concepts/vpc-nacl-rules.png)
 
 # Security Group
 

@@ -17,4 +17,4 @@ React is now the popular way to build web components, but if you are working on 
 
 ---
 
-![dashboard](/assets/images/content/dashboard-bd.gif)
+![dashboard](/assets/img/posts/2015-12-13-dashbarod-with-reusable-charts/dashboard-bd.gif)

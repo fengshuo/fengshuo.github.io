@@ -30,7 +30,7 @@ Unfortunately I didn't take note of what I did, so I don't have the step by step
 
 To generate IPA file, just follow the official doc, and don't forget to change the `NSExceptionDomains` to build the IPA file (you also need to put it back if you need to change things later)
 
-![change info.plist config](/assets/images/content/xcode-release.png)
+![change info.plist config](/assets/img/posts/2017-10-31-what-i-learned-from-building-react-native-ios-app-part-2/xcode-release.png)
 
 # Icons, Splashscreen, Screenshots
 
